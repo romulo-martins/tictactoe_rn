@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-A simple tic tac toe Game made with React Native, thats build in iOS and Android.
+A simple tic tac toe game written with React Native framework, thats build in iOS and Android.
 
 ## Install
 

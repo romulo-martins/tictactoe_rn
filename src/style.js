@@ -51,15 +51,16 @@ const styles = StyleSheet.create({
     cellO: {
       backgroundColor: '#3399ff',
     },
-    winner: {
+    winnerMessage: {
       textAlign: 'center',
-      fontSize: 1.5,
+      fontSize: 2.5,
       margin: 5,
     },
     restartButton: {
-      width: 150,
-      height: 50,
+      width: 140,
+      height: 60,
       borderRadius: 5,
+      flexDirection: 'column',
       backgroundColor: '#40bf40',
       alignItems: 'center',
       justifyContent: 'center',

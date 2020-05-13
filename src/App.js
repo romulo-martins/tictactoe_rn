@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import styles from './style';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 function App() {
   const emptyBoard = Array(9).fill('');
@@ -92,17 +93,27 @@ function App() {
       {winner &&
         <View style={styles.footer}>
           {winner === 'E' ?
-            <View style={styles.winner}>
+            <View style={styles.winnerMessage}>
               <Text>Empate!</Text>
             </View>
             :
-            <View style={styles.winner}>
-              <Text>{`O jogador ${winner} venceu!`}</Text>
+            <View style={styles.winnerMessage}>
+              <Text>
+                O jogador 
+                <Text style={{
+                  color: (winner === 'O' ? '#3399ff' : '#ff5050'),
+                  fontWeight: 'bold'
+                }}>
+                  {` ${winner} `} 
+                </Text>
+                venceu!
+              </Text>
             </View>
           }
           <TouchableOpacity
             onPress={restartGame}
             style={styles.restartButton}>
+            <Icon name="refresh" size={18} color="white" />
             <Text style={styles.textButton}>Recomecar Jogo</Text>
           </TouchableOpacity>
         </View>
